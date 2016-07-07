@@ -1,3 +1,5 @@
+require 'pry'
+
 class Card
   attr_reader :question, :answer
 
@@ -45,12 +47,35 @@ class Deck
 end
 
 class Round
-  attr_reader :deck, :guesses
+  attr_reader :deck
+  attr_accessor :guesses, :counter
 
   def initialize(deck)
     @deck = deck
+    @guesses = []
+    @counter = 0
   end
 
+  def current_card
+    deck.cards.shift
+  end
+
+  def record_guess(response)
+    @guesses << guess.response
+    guess.response
+  end
+
+  def number_correct
+    counter = 0
+    @guesses.map do |guess|
+      if guess.response == guess.card.answer
+        counter += 1
+      end
+    end
+    counter
+  end
+
+binding.pry
 # number_correct_counter += 1 for every correct recorded guess
 # Divide deck.count by number_correct_counter (and times to get percentage correct
 end

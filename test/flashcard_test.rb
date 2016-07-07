@@ -50,4 +50,43 @@ class FlashcardTest < Minitest::Test
     assert_equal deck, round.deck
   end
 
+  def test_it_starts_round_with_an_empty_guesss_array
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    deck = Deck.new([card_1, card_2])
+    round = Round.new(deck)
+    assert_equal [], round.guesses
+  end
+
+  def test_current_card_moves_through_array
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west")
+    deck = Deck.new([card_1, card_2, card_3])
+    round = Round.new(deck)
+    round.current_card
+    assert_equal card_2, round.current_card
+  end
+
+  def test_it_records_guesses_into_guesses_array
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    deck = Deck.new([card_1, card_2])
+    round = Round.new(deck)
+    round.current_card
+    round.record_guess("93,000,000")
+    assert_equal ["93,000,000"], round.guesses
+  end
+
+  def test_if_number_of_correct_guesses_moves_counter
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
+    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west")
+    deck = Deck.new([card_1, card_2, card_3])
+    round = Round.new(deck)
+    guess = Guess.new("Juneau", card_1)
+    assert_equal 1, round.number_correct
+
+    binding.pry
+  end
 end
