@@ -28,6 +28,7 @@ class Guess
       "Correct!"
     else
       "Incorrect."
+      binding.pry
     end
   end
 end
@@ -42,4 +43,7 @@ class Deck
   def count
     cards.count
   end
+end
+
+class Round
 end
