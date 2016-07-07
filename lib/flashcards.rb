@@ -28,7 +28,6 @@ class Guess
       "Correct!"
     else
       "Incorrect."
-      binding.pry
     end
   end
 end
@@ -46,4 +45,12 @@ class Deck
 end
 
 class Round
+  attr_reader :deck, :guesses
+
+  def initialize(deck)
+    @deck = deck
+  end
+
+# number_correct_counter += 1 for every correct recorded guess
+# Divide deck.count by number_correct_counter (and times to get percentage correct
 end
