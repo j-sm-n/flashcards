@@ -1,6 +1,6 @@
 class Round
 
-  attr_reader :card, :guesses, :deck, :number_correct, :total_cards, :number_guesses
+  attr_reader :guesses, :deck, :number_correct, :total_cards, :number_guesses
 
   def initialize(deck)
     @deck             = deck
@@ -24,13 +24,17 @@ class Round
   end
 
   def move_to_next_card
-    @new_guess.correct? ? @number_correct += 1 : deck.cards << deck.cards[@current_card] && @total_cards += 1
-    @current_card    += 1
-    @number_guesses  +=1
+    if @new_guess.correct?
+      @number_correct += 1
+    else
+      deck.cards << deck.cards[@current_card] && @total_cards += 1
+    end
+    @current_card += 1
+    @number_guesses +=1
   end
 
   def percent_correct
-    @percent_correct = @number_correct / @number_guesses * 100
+    @percent_correct = (@number_correct / @number_guesses) * 100
   end
 
   def increment_guess

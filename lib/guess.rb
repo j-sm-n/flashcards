@@ -1,3 +1,5 @@
+require 'pry'
+
 class Guess
   attr_reader :response, :card
 
