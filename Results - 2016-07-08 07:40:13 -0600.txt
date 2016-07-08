@@ -1,0 +1,5 @@
+Card Question:  Beer is either an ale or a ____, Card Answer: LAGER, User Response:  lager, Correct!
+Card Question:  What does IPA stand for?, Card Answer: INDIA PALE ALE, User Response:  india pale ale, Correct!
+Card Question:  What is the best style of beer?, Card Answer: TASTE IS SUBJECTIVE, User Response:  style is subjective, Incorrect.
+Card Question:  What is the best style of beer?, Card Answer: TASTE IS SUBJECTIVE, User Response:  taste is subjective, Correct!
+You had 3 guesses out of 4 for a score of 75.0%

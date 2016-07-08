@@ -1,0 +1,3 @@
+Beer is either an ale or a ____,lager
+What does IPA stand for?,India Pale Ale
+What is the best style of beer?,taste is subjective
