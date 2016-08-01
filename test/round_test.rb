@@ -4,7 +4,7 @@ require_relative '../lib/card'
 require_relative '../lib/guess'
 require_relative '../lib/deck'
 require_relative '../lib/round'
-require 'pry'
+#require 'pry'
 
 class RoundTest < Minitest::Test
 

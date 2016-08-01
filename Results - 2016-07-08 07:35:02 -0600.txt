@@ -1,6 +1,0 @@
-Card Question:  What is 5 + 5?, Card Answer: 10, User Response:  10, Correct!
-Card Question:  What is Rachel's favorite animal?, Card Answer: RED PANDA, User Response:  red panda, Correct!
-Card Question:  What is Mike's middle name?, Card Answer: NOBODY KNOWS, User Response:  nobody knows, Correct!
-Card Question:  What cardboard cutout lives at Turing?, Card Answer: JUSTIN BIEBER, User Response:  justin biebers, Incorrect.
-Card Question:  What cardboard cutout lives at Turing?, Card Answer: JUSTIN BIEBER, User Response:  justin bieber, Correct!
-You had 4 guesses out of 5 for a score of 80.0%

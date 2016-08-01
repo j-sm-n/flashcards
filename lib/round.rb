@@ -1,3 +1,5 @@
+require 'pry'
+
 class Round
 
   attr_reader :guesses, :deck, :number_correct, :total_cards, :number_guesses
@@ -36,6 +38,8 @@ class Round
   def percent_correct
     @percent_correct = (@number_correct / @number_guesses) * 100
   end
+
+  binding.pry
 
   def increment_guess
     @current_guess += 1
